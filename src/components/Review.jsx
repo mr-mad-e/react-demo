@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import Api from '../helper/api'
 
@@ -73,7 +74,7 @@ class App extends Component {
                 <div className="container">
                     <div className="page">
                         <div className="breadcrumbs">
-                            <a href="#/">Home</a>
+                            <a href="/">Home</a>
                             <span>Movie Review</span>
                         </div>
 
@@ -98,11 +99,15 @@ class App extends Component {
                             {this.state.movies.map((movie, index) => (
                                 <div key={index} className="movie">
                                     <figure className="movie-poster">
-                                        <a href="#/review/{{movie.Id}}">
+                                        <NavLink to={'/review/' + movie.Id}>
                                             <img src={movie.Poster} alt="#" />
-                                        </a>
+                                        </NavLink>
                                     </figure>
-                                    <div className="movie-title"><a href="#/review/{{movie.Id}}">{movie.Title}</a></div>
+                                    <div className="movie-title">
+                                        <NavLink to={'/review/' + movie.Id}>
+                                            {movie.Title}
+                                        </NavLink>
+                                        </div>
                                     <p>{movie.Plot}</p>
                                 </div>
                             ))}

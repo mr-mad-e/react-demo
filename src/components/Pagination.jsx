@@ -10,8 +10,6 @@ class JoinUs extends Component {
             pageSize: props.config.pageSize || 10,
             
         };
-
-        console.log(props);
     }
 
     onChangePage = (value) => {

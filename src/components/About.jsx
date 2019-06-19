@@ -7,7 +7,7 @@ class About extends Component {
                 <div className="container">
                     <div className="page">
                         <div className="breadcrumbs">
-                            <a href="#/">Home</a>
+                            <a href="">Home</a>
                             <span>About us</span>
                         </div>
 

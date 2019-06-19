@@ -14,6 +14,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import JoinUs from './components/JoinUs'
 import Review from './components/Review'
+import Single from './components/Single'
 
 class App extends Component {
   render() {
@@ -26,7 +27,8 @@ class App extends Component {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/joinus" component={JoinUs} />
-        <Route path="/review" component={Review} />
+        <Route exact path="/review" component={Review} />
+        <Route exact path="/review/:id" component={Single} />
 
         <Footer></Footer>
          </Router>
